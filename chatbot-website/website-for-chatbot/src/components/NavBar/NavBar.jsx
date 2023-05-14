@@ -1,28 +1,40 @@
 import { NavLink } from "react-router-dom";
+import styles from "./NavBar.module.css";
+import AllvoiceLogo from "../../assets/AllvoiceLogo.png";
 
 export const Navbar = () => {
   return (
     <nav>
-      <ul>
+      <ul className={styles.navBox}>
         <li>
           <NavLink to="/">
-            <img alt="" />
+            <img src={AllvoiceLogo} alt="logo" className={styles.logo} />
           </NavLink>
         </li>
         <li>
-          <NavLink to="/home">Home</NavLink>
+          <NavLink to="/home" className={styles.navLink}>
+            Home
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="/about" className={styles.navLink}>
+            About
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/features">Features</NavLink>
+          <NavLink to="/features" className={styles.navLink}>
+            Features
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/contact">Contact Us</NavLink>
+          <NavLink to="/contact" className={styles.navLink}>
+            Contact Us
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/log-in">Log in</NavLink>
+          <NavLink to="/log-in" className={styles.navLink}>
+            Log in
+          </NavLink>
         </li>
       </ul>
     </nav>
