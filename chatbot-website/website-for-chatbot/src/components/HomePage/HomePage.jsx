@@ -5,7 +5,7 @@ export const HomePage = () => {
   return (
     <>
       <div className={styles.wrapper}>
-        <section>
+        <section className={styles.photo}>
           <img src={avaya1} alt="avaya" className={styles.img} />
         </section>
         <section className={styles.text}>

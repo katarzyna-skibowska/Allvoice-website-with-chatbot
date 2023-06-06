@@ -1,14 +1,11 @@
-.navBox {
-  position: sticky;
-  top: 0;
+.nav {
   background-color: #e2d6d7;
-  z-index: 200;
-  width: 100%;
   height: 80px;
   display: flex;
   align-items: center;
   list-style-type: none;
   justify-content: space-evenly;
+  margin: 0;
 }
 
 .logo {
@@ -20,4 +17,7 @@
   color: #120e0e;
   font-weight: 500;
   text-decoration: none;
+}
+.navLink:hover {
+  text-decoration: underline;
 }

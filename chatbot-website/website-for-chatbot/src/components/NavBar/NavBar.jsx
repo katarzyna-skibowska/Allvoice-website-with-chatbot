@@ -4,8 +4,8 @@ import AllvoiceLogo from "../../assets/AllvoiceLogo.png";
 
 export const Navbar = () => {
   return (
-    <nav>
-      <ul className={styles.navBox}>
+    <nav className={styles.navBox}>
+      <ul className={styles.nav}>
         <li>
           <NavLink to="/">
             <img src={AllvoiceLogo} alt="logo" className={styles.logo} />
