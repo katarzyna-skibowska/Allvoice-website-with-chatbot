@@ -17,7 +17,12 @@
   color: #120e0e;
   font-weight: 500;
   text-decoration: none;
+  cursor: pointer;
 }
 .navLink:hover {
   text-decoration: underline;
+}
+
+.auth {
+  margin-left: 30px;
 }

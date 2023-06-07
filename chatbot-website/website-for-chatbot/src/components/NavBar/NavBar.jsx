@@ -1,8 +1,10 @@
 import { NavLink } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import AllvoiceLogo from "../../assets/AllvoiceLogo.png";
+import { signOut } from "firebase/auth";
+import { auth } from "../../api/firebase";
 
-export const Navbar = () => {
+export const Navbar = ({ isAuth }) => {
   return (
     <nav className={styles.navBox}>
       <ul className={styles.nav}>
@@ -12,30 +14,46 @@ export const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/home" className={styles.navLink}>
+          <NavLink to="/" className={styles.navLink}>
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/about" className={styles.navLink}>
+          <NavLink to="/" className={styles.navLink}>
             About
           </NavLink>
         </li>
+
         <li>
-          <NavLink to="/features" className={styles.navLink}>
-            Features
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/contact" className={styles.navLink}>
+          <NavLink to="/" className={styles.navLink}>
             Contact Us
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/log-in" className={styles.navLink}>
-            Log in
-          </NavLink>
-        </li>
+        {!isAuth ? (
+          <>
+            <li>
+              <NavLink to="auth/login" className={styles.navLink}>
+                Log in
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="auth/register" className={styles.navLink}>
+                Register
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="auth/forgot-password" className={styles.navLink}>
+                Forgot password
+              </NavLink>
+            </li>
+          </>
+        ) : (
+          <li onClick={() => signOut(auth)}>
+            <NavLink to="/" className={styles.navLinkAuth}>
+              Log out
+            </NavLink>
+          </li>
+        )}
       </ul>
     </nav>
   );
