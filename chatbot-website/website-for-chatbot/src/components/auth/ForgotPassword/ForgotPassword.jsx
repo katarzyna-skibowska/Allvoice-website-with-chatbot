@@ -18,7 +18,7 @@ export const ForgotPassword = () => {
 
   return (
     <Form
-      submitText="Poproś o przypomnienie hasła"
+      submitText="Remind my password"
       onSubmit={handlePasswordReset}
       isPasswordHidden
     />

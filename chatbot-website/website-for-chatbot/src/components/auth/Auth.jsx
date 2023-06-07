@@ -1,8 +1,9 @@
 import { Outlet } from "react-router";
+import styles from "./Auth.module.css";
 
 export const Auth = () => (
-  <>
-    <h2>Panel klienta</h2>
+  <div className={styles.wrapperAuth}>
+    <h2>Client panel</h2>
     <Outlet />
-  </>
+  </div>
 );
