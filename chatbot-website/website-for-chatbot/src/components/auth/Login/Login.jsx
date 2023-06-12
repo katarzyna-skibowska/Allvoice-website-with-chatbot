@@ -11,7 +11,6 @@ export const Login = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((jwt) => {
         e.target.reset();
-        // console.log(jwt);
       })
       .catch((e) => {
         console.dir(e);

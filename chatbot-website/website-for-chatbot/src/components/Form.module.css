@@ -2,6 +2,23 @@
   border-radius: 4px;
   margin: 15px;
   border: 1px solid #120e0e;
+  background-color: #e2d6d7;
   padding: 7px;
   width: 100px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.boxAuth {
+  padding: 8px;
+}
+
+.inputAuth {
+  border: 1px solid #120e0e;
+  height: 25px;
+  position: relative;
+}
+.labelAuth {
+  margin-right: 5px;
+  display: block;
 }
